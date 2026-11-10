@@ -10,10 +10,9 @@ This tool fixes that. It sits in the tray, notices when a Remote Play stream sta
 
 1. **Get the tool.** Download the zip from the [Releases](https://github.com/dev-kalleno/steam-audio-relay/releases/latest) page, unpack it anywhere and start `steam-audio-relay.exe`. The exe isn't signed, so Windows SmartScreen will probably ask once ("More info", then "Run anyway"). If you'd rather not run a stranger's exe, [build it yourself](#build-it-yourself) with one command.
 2. **Wave Link: keep "System" as the Windows default.** In Wave Link's settings, under audio devices, there is a lock for the system devices. Switch it on and set the output device to "System". Without the lock, Steam changes the Windows default to its own "Steam Streaming Speakers" when a client connects, and every program that has no Wave Link channel goes silent.
-3. **Steam: audio channels on Automatic or Stereo.** Set this in Steam's Remote Play settings, on the PC and on the device you stream to. With 5.1 or 7.1, a game you start through the stream can come up completely silent.
-4. **In the tool: check the target and switch on "Start with Windows".** "Plays into" should show your Wave Link "System" device. It is picked for you if there is only one device with that name.
+3. **In the tool: check the target and switch on "Start with Windows".** "Plays into" should show your Wave Link "System" device. It is picked for you if there is only one device with that name.
 
-That's it. Connect from your Deck or phone. Within about a second the line under the title turns green and says "Relaying 6 devices" (or however many channels you have).
+That's it. Leave Steam's audio channel setting for Remote Play on Automatic (see [below](#if-something-is-wrong) if you changed it). Connect from your Deck or phone. Within about a second the line under the title turns green and says "Relaying 6 devices" (or however many channels you have).
 
 ## The window
 
@@ -72,7 +71,7 @@ The target is not the device Steam records. While a stream runs, look into `Stea
 Check that channel's row in the tool: is it muted or turned down, and does its meter move while the program plays? If the meter stays flat, the program isn't playing on that Wave Link channel. If the channel has no row at all, click "Refresh".
 
 **A game started through the stream is silent, everything else works.**
-That is step 3 of the quick start. Steam sends a freshly started game to its 8-channel "Steam Streaming Speakers", Wave Link moves it to a stereo channel, and the game ends up with an 8-channel stream on a stereo device. That produces silence and no error. With Automatic or Stereo it works. A game that is already running when you connect doesn't have this problem.
+This only happens if you changed Steam's audio channels for Remote Play to surround. I had set 7.1 on the PC and on the Deck because it sounded like a good idea. Steam then sends a freshly started game to its 8-channel "Steam Streaming Speakers", Wave Link moves it to a stereo channel, and the game ends up with an 8-channel stream on a stereo device. That produces silence and no error. Set it back to Automatic (or Stereo) on both sides and it works. The stream is stereo anyway, so you lose nothing. A game that is already running when you connect doesn't have this problem.
 
 **Programs without a Wave Link channel go silent when a client connects.**
 That is step 2 of the quick start. The lock is off and Steam has changed the Windows default device.
