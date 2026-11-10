@@ -76,9 +76,6 @@ This only happens if you changed Steam's audio channels for Remote Play to surro
 **Programs without a Wave Link channel go silent when a client connects.**
 That is step 2 of the quick start. The lock is off and Steam has changed the Windows default device.
 
-**There are two devices called "System".**
-Wave Link can keep a dead, greyed-out one around. Pick the live one. The short id in brackets tells them apart.
-
 **Steam Link VR or SteamVR has no sound.**
 Not this tool's fault, but it happened to me along the way: Wave Link's device visibility list had hidden "Steam Streaming Microphone", and SteamVR refuses to start audio without it. Switch it back on in Wave Link's settings.
 
