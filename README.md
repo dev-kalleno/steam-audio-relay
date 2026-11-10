@@ -47,7 +47,7 @@ Nothing needs to be set up in Wave Link's mixes. No mix has to send anything any
 
 ## Setup
 
-1. Run `build.cmd`. It uses `csc.exe` from .NET Framework 4, which is already on Windows 10 and 11, so you don't need an SDK. You get two exes: `steam-audio-relay.exe` (the window) and `steam-audio-relay-cli.exe` (for the terminal). I'd rather you build it yourself than download an exe from a stranger, and the source is short enough to read.
+1. Get the two exes: `steam-audio-relay.exe` (the window) and `steam-audio-relay-cli.exe` (for the terminal). The quick way is the zip on the [Releases](https://github.com/dev-kalleno/steam-audio-relay/releases/latest) page. The exes aren't signed, so Windows SmartScreen will probably warn you the first time. If you'd rather not run an exe from a stranger, run `build.cmd` instead. It uses `csc.exe` from .NET Framework 4, which is already on Windows 10 and 11, so you don't need an SDK, and the source is short enough to read first.
 
 2. In Wave Link, open Settings, then Audio devices, then "Lock system devices", and lock the output device to "System". Leave it on. The wording may differ in your version or language, mine is German. This matters: with the lock off, Steam switches the Windows default to its own "Steam Streaming Speakers" when a client connects, and every program that isn't assigned to a Wave Link channel goes silent.
 
