@@ -16,8 +16,6 @@ Steam records exactly one playback device on the PC: the Windows default playbac
 
 Wave Link gives every channel (System, Game, Browser, Voice chat and so on) its own Windows playback device, and routes your programs to them. The Windows default is the "System" one. So Steam records "System" and nothing else. Whatever plays on the Game or Browser device never reaches it.
 
-OBS was fine the whole time, because it takes a Wave Link mix directly. That is why this took me weeks to work out. Everything sounded right on the PC, and everything sounded right in the recording.
-
 ```mermaid
 flowchart LR
   subgraph before [Before]
